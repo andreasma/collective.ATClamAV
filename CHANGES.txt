@@ -4,6 +4,9 @@ Changelog
 1.3 - unreleased
 ----------------
 
+- Skip validation on Plone sites that don't have this product installed.
+  [davisagli]
+
 - Add z3c.form validator to check files uploaded via plone.formwidget.namedfile.
   [davisagli]
 

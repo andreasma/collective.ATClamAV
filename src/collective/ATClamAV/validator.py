@@ -21,7 +21,9 @@ def _scanBuffer(buffer):
 
     siteroot = getUtility(ISiteRoot)
     ptool = getToolByName(siteroot, 'portal_properties')
-    settings = ptool.clamav_properties
+    settings = getattr(ptool, 'clamav_properties', None)
+    if settings is None:
+        return ''
     scanner = getUtility(IAVScanner)
 
     if settings.clamav_connection == 'net':
