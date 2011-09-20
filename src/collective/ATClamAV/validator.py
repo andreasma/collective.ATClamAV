@@ -96,7 +96,7 @@ else:
         def validate(self, value):
             super(Z3CFormClamAVValidator, self).validate(value)
 
-            if getattr(value, '_validate_isVirusFree', False):
+            if getattr(value, '_validate_isVirusFree', False) or value is None:
                 # validation is called multiple times for the same file upload
                 return
 
