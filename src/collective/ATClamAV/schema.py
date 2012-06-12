@@ -12,7 +12,12 @@ class VirusFreeModifier(object):
         self.context = context
 
     def fiddle(self, schema):
-        schema[self.fieldname].validators.appendRequired('isVirusFree')
+        try:
+            field = schema[self.fieldname]
+        except KeyError:
+            pass
+        else:
+            schema[self.fieldname].validators.appendRequired('isVirusFree')
 
 
 class VirusFreeATFileModifier(VirusFreeModifier):
