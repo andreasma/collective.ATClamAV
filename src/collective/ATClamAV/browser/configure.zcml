@@ -4,14 +4,13 @@
     i18n_domain="collective.ATClamAV">
 
     <!-- Control panel-->
-    <adapter factory=".settings.ClamAVControlPanelAdapter" />
-
+    
     <browser:page
-        name="clamav_settings_controlpanel"
+        name="clamav-controlpanel"
         for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        class=".settings.ClamAVControlPanel"
         permission="cmf.ManagePortal"
-        />
+        class=".controlpanel.ClamAVControlPanelView"
+     />
 
     <browser:resource
         name="clamavicon"
