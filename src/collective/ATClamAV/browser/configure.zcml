@@ -4,6 +4,7 @@
     i18n_domain="collective.ATClamAV">
 
     <!-- Control panel-->
+     <adapter factory=".controlpanel.ClamAVControlPanelAdapter" />
     
     <browser:page
         name="clamav-controlpanel"
