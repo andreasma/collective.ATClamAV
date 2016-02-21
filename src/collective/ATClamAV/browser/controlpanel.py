@@ -122,6 +122,13 @@ class ClamAVControlPanelForm(RegistryEditForm):
     schema_prefix = "ClamAV5"
     label = u'ClamaAV Plone 5 Settings'
 
+    def updateFields(self):
+            super(ClamAVControlPanelForm, self).updateFields()
+
+    def updateWidgets(self):
+            super(ClamAVControlPanelForm, self).updateWidgets()
 
 
-ClamAVControlPanelView = layout.wrap_form(ClamAVControlPanelForm, ControlPanelFormWrapper)
+class ClamAVControlPanelView(ControlPanelFormWrapper):
+        form =ClamAVControlPanelForm
+
