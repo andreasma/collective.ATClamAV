@@ -4,9 +4,7 @@ from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from plone.z3cform import layout
 
 from collective.ATClamAV import ATClamAVMessageFactory as _
-from collective.ATClamAV.interfaces import IAVScannerSettings
 from zope.interface import Interface
-from datetime import date
 from zope import schema
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from zope.schema.interfaces import IContextSourceBinder
